@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+  </head>
+<body>
+    <h1>Geolocation API in JavaScript</h1>
+    <ul class="tsumarry">
+        <li>allows users</li>
+        <li>allows users</li>
+        <li>allows users</li>
+    </ul>
+    
+    <script>
+        const successCallback = (position) =>{
+            console.log(position);
+        };
+        
+        const errorCallback = (error) => {
+            console.error(error);
+        };
+        
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    </script>
+</body>

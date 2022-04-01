@@ -178,21 +178,25 @@ line-height:140%;
                 //then blue
                 marker = L.marker([lat, long], {icon: blueIcon})
                 circle = L.circle([lat, long], {radius: accuracy})
+                marker.bindPopup("Temperature: "+temp).openPopup();
             }
             else if(temp >= 10 && temp < 30){
                 //then green
                 marker = L.marker([lat, long], {icon: greenIcon})
                 circle = L.circle([lat, long], {radius: accuracy, color:'green'})
+                marker.bindPopup("Temperature: "+temp).openPopup();
             }
             else if(temp >=30 && temp <= 60){
                 //then red
                 marker = L.marker([lat, long], {icon: redIcon})
                 circle = L.circle([lat, long], {radius: accuracy, color:'red'})
+                marker.bindPopup("Temperature: "+temp).openPopup();
             }
             else{
                 //then out of range
                 marker = L.marker([lat, long], {icon: blackIcon})
                 circle = L.circle([lat, long], {radius: accuracy, color:'black'})
+                marker.bindPopup("Temperature: "+temp).openPopup();
             }
             
 
